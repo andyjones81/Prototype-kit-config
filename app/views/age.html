@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="{{appJourney.back}}" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <form method="POST" action="{{appJourney.submit}}">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="over-18-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Are you over 18?
+            </h1>
+          </legend>
+          <p>Depending on how you answer, the next page is different. This is set in the config and can be easily
+            changed.</p>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="over-18-1" name="over-18" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="over-18-1">
+                Yes
+              </label> </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="over-18-2" name="over-18" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="over-18-2">
+                No
+              </label> </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="govuk-button">
+        Save and continue
+      </button>
+
+
+
+
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

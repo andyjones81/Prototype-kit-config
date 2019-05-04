@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="{{appJourney.back}}" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Information
+    </h1>
+    <p>
+      I know you wouldn't usually put a button in a form submission without any form inputs to do something with. It's
+      just to demonstrate the functionality
+    </p>
+
+    <h12 class="govuk-heading-m">
+      Whats going on?
+      </h2>
+
+      <p>The route.js file references the app-journey-config.json file and passes the appropropriate object (appJourney) to the view.</p>
+      <p>
+        Back link references the config and uses the back value to set the url.</p>
+      <pre>
+    <code>
+&#x3C;a href=&#x22;{%raw%}{{appJourney.back}}{%endraw%}&#x22; class=&#x22;govuk-back-link&#x22;&#x3E;Back&#x3C;/a&#x3E;
+    </code>
+</pre>
+      <p>
+        Form action references the config and uses the submit value to set the url (you might want a different submit
+        url to the page).</p>
+      <pre>
+        <code>
+&#x3C;form method=&#x22;POST&#x22; action=&#x22;{%raw%}{{appJourney.submit}}{%endraw%}&#x22;&#x3E;
+        </code>
+    </pre>
+
+
+      <form method="POST" action="{{appJourney.submit}}">
+
+        <button type="submit" class="govuk-button">
+          Next
+        </button>
+
+      </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Complete
+      </h1>
+      <div class="govuk-panel__body">
+        All done!
+      </div>
+    </div>
+    <p class="govuk-body">
+      <a href="{{appJourney.back}}">Start over</a>
+    </p>
+    <p class="govuk-body">
+      Let me know what you think, especially if you use it, improve it, or extend it.
+    </p>
+
+    <p class="govuk-body">
+      <a href="https://twitter.com/andyjones_1981">andyjones_1981</a> (twitter)
+    </p>
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

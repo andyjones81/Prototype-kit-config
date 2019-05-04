@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      The GOV.UK Prototype Kit - config prototype
+      <span class="govuk-caption-xl">{{releaseVersion}}</span>
+    </h1>
+
+    <h2 class="govuk-heading-m">What is this prototype?</h2>
+
+    <p>This prototype example demonstartes a basic route config managed through a JSON file. It doesn't replace writing
+      routes but makes changing them a bit easier.</p>
+    <p>It's very rudementary and can be expanded easily to do other things, like versioning the journey.</p>
+
+    <p>There are just a few pages with a config file driving the logic. See the file named app-journey-config.json in the data folder.</p>
+
+    <p>I wrote about why this exists:
+
+      <a href="https://medium.com/@andyjones_1981/making-user-journeys-configurable-in-the-gov-prototype-kit-d472d23d86a8"
+        target="_Blank">Making user journeys configurable in the GOV prototype kit</a> </p>
+    <p>
+      <a href="start" class="govuk-button" role="button">Get started</a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}

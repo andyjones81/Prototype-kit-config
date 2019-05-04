@@ -1,0 +1,55 @@
+{
+    "pages": 
+        [{
+            "page": "start",
+            "back": "/",
+            "submit": "start",
+            "next": "name",
+            "check": "",
+            "conditions":[{}]
+        },
+        {
+            "page": "name",
+            "back": "start",
+            "submit": "name",
+            "next": "age",
+            "check": "",
+            "conditions":[{}]
+        },
+        {
+            "page": "age",
+            "back": "name",
+            "submit": "age",
+            "next": "",
+            "check": "",
+            "conditions":[{
+                "no": "tooyoung",
+                "yes": "email"
+            }]
+        },
+        {
+            "page": "email",
+            "back": "age",
+            "submit": "email",
+            "next": "complete",
+            "check": "",
+            "conditions":[{}]
+        },
+        {
+            "page": "tooyoung",
+            "back": "age",
+            "submit": "",
+            "next": "",
+            "check": "",
+            "conditions":[{}]
+        },
+        {
+            "page": "complete",
+            "back": "start",
+            "submit": "",
+            "next": "",
+            "check": "",
+            "conditions":[{}]
+        }
+    ]
+}

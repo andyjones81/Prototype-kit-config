@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start page
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">You're too young to use this service</h1>
+
+    <p class="govuk-body">
+      You must be over 18 to use this service.
+    </p>
+    
+    <p class="govuk-body">
+      If you are over 18, you can change your answer to the <a href="{{appJourney.back}}" class="govuk-link">age
+        question</a>.
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
